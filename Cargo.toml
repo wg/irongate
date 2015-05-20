@@ -1,0 +1,33 @@
+[package]
+
+name    = "irongate"
+version = "1.0.0"
+authors = ["Will <will@glozer.net>"]
+license = "Apache-2.0"
+
+description   = "Placeholder"
+documentation = "https://github.com/wg/irongate"
+repository    = "https://github.com/wg/irongate"
+
+[[bin]]
+name = "irongate"
+
+[dependencies]
+bitflags        = "*"
+chrono          = "*"
+docopt          = "*"
+docopt_macros   = "*"
+regex           = "*"
+regex_macros    = "*"
+rustc-serialize = "*"
+time            = "*"
+
+[dependencies.sketchy]
+git = "https://github.com/codahale/sketchy"
+
+[dev-dependencies]
+tempdir = "*"
+
+[profile.release]
+opt-level = 3
+lto       = true

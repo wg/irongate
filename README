@@ -1,0 +1,16 @@
+irongate - a rusty SSH scan blocker
+
+  irongate is a modern SSH scan blocker for operating systems that
+  support kqueue and pf. It monitors the system authentication log
+  and adds attacker IP addresses to a pf table after a number of
+  login attempts.
+
+  irongate is written in rust, a new memory-safe language; supports
+  both IPv4 and IPv6; and uses a count-min sketch to efficiently map
+  IP addresses to frequencies.
+
+Installation
+
+  irongate uses a number of rust APIs that have yet to be stabilized
+  and so must be built with a version of rust from the nightly release
+  channel. The build process is a simple `cargo build --release`.
